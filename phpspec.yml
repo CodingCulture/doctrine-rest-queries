@@ -1,0 +1,4 @@
+suites:
+    doctrine-rest-queries:
+        spec_path: Tests/
+        src_path: .
