@@ -1,0 +1,11 @@
+services:
+  codingculture.doctrine_rest.query_builder.default_query_builder:
+    class: CodingCulture\DoctrineRestQueriesBundle\QueryBuilder\QueryBuilder
+    arguments:
+      - '@doctrine.orm.default_entity_manager'
+
+  codingculture.doctrine_rest.service.search:
+    class: CodingCulture\DoctrineRestQueriesBundle\Service\SearchService
+    arguments:
+      - '@doctrine.orm.default_entity_manager'
+      - '@codingculture.doctrine_rest.query_builder.default_query_builder'
